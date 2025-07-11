@@ -79,12 +79,38 @@ document.addEventListener('DOMContentLoaded', function () {
                 'CompTIA Security+': 'https://www.credly.com/badges/31ebd096-f64b-4850-a10b-8ad08ba69760/public_url',
                 'QuickHeal Digital Forensic Investigator': 'https://lms.quickhealacademy.com/certificates/verification/exam?id=LPU-0000-028171',
                 'CompTIA Network+': 'https://www.credly.com/badges/2845718e-9db6-480c-a86c-d5cd2bc60043/public_url',
-                
             };
             
             if (verificationUrls[certTitle]) {
                 window.open(verificationUrls[certTitle], '_blank');
             }
+        });
+    });
+
+    // Social Media Dock functionality
+    const dockItems = document.querySelectorAll('.dock-item');
+    dockItems.forEach(item => {
+        // Add tooltip
+        const title = item.getAttribute('title');
+        const tooltip = document.createElement('span');
+        tooltip.className = 'dock-tooltip';
+        tooltip.textContent = title;
+        item.appendChild(tooltip);
+        
+        // Position tooltip
+        item.addEventListener('mouseenter', () => {
+            const rect = item.getBoundingClientRect();
+            tooltip.style.left = `${rect.width + 10}px`;
+        });
+
+        // Add click animation
+        item.addEventListener('click', function(e) {
+            if (this.getAttribute('href')) return; // Allow default link behavior
+            
+            this.style.transform = 'translateX(8px) scale(0.9)';
+            setTimeout(() => {
+                this.style.transform = 'translateX(8px) scale(1.15)';
+            }, 100);
         });
     });
 
