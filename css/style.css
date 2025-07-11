@@ -1067,30 +1067,44 @@ body::after {
         flex-direction: column;
     }
     
-    .timeline-date,
-    .timeline-content {
-        width: 100%;
+    /* Improved Timeline Styling */
+    .timeline::before {
+        left: 1rem;
+        transform: none;
     }
     
     .timeline-item,
     .timeline-item:nth-child(odd) {
-        flex-direction: column;
+        flex-direction: row;
+        margin-bottom: 2rem;
+        padding-left: 2rem;
+    }
+    
+    .timeline-date,
+    .timeline-content {
+        width: 100%;
+        padding: 0;
     }
     
     .timeline-date {
         text-align: left !important;
-        padding-bottom: 0;
+        padding-bottom: 0.5rem;
+        position: relative;
     }
     
     .timeline-date::before {
         top: auto;
         bottom: -6px;
-        left: 0;
+        left: -1.2rem;
         right: auto;
     }
     
+    .timeline-content {
+        padding-top: 1rem;
+    }
+    
     .timeline-item:nth-child(odd) .timeline-date::before {
-        left: 0;
+        left: -1.2rem;
     }
 }
 
@@ -1131,6 +1145,20 @@ body::after {
     .section-title {
         font-size: 2rem;
     }
+    
+    /* Additional Mobile Timeline Tweaks */
+    .timeline::before {
+        left: 0.8rem;
+    }
+    
+    .timeline-date::before {
+        left: -1rem;
+    }
+    
+    .timeline-item,
+    .timeline-item:nth-child(odd) {
+        padding-left: 1.5rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1155,8 +1183,16 @@ body::after {
     .footer-social {
         justify-content: center;
     }
+    
+    /* Final Mobile Timeline Adjustments */
+    .timeline-item {
+        margin-bottom: 1.5rem;
+    }
+    
+    .timeline-content {
+        padding-top: 0.5rem;
+    }
 }
-
 /* Animation for blinking cursor */
 @keyframes blink {
     from, to { opacity: 0; }
