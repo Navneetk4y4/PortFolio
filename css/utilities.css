@@ -1,0 +1,59 @@
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes gradientShift {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+@keyframes logoGlow {
+    0% { text-shadow: 0 0 10px rgba(0, 255, 170, 0.3); }
+    50% { text-shadow: 0 0 20px rgba(0, 170, 255, 0.5); }
+    100% { text-shadow: 0 0 10px rgba(170, 0, 255, 0.3); }
+}
+
+/* All other animations... */
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    /* All 992px media queries... */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--black);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    /* All 768px media queries... */
+}
+
+@media (max-width: 576px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* All 576px media queries... */
+}

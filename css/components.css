@@ -1,0 +1,60 @@
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 2rem;
+    background: linear-gradient(90deg, var(--glossy-green), var(--glossy-blue));
+    color: var(--black);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 255, 170, 0.3);
+}
+
+/* All button styles... */
+
+/* Cards */
+.skill-category {
+    padding: 2rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* All card styles... */
+
+/* Terminal */
+.terminal {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+/* All terminal styles... */
+
+/* Form elements */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* All form styles... */
+
+/* Tech tags */
+.tech-tag {
+    background: rgba(0, 255, 170, 0.1);
+    color: var(--glossy-green);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
