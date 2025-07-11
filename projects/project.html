@@ -6,9 +6,15 @@
     <title>Navneet | Cyber Projects</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="../css/nav-dock.css">
+    <link rel="stylesheet" href="../css/dock.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../js/nav-dock.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/scrollbar.js"></script>
 </head>
 <body>
      <!-- Particle.js Background -->
@@ -19,18 +25,47 @@
     
     <div class="container">
         <!-- Header/Navigation -->
-        <header class="glass">
-            <div class="logo">NAVNEET</div>
-            <nav>
-                <a href="../index.html"><i class="fas fa-home"></i> Home</a>
-                <a href="#" class="active"><i class="fas fa-project-diagram"></i> Projects</a>
-                <a href="../index.html#certifications"><i class="fas fa-certificate"></i> Certifications</a>
-                <a href="../index.html#contact"><i class="fas fa-envelope"></i> Contact</a>
-            </nav>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
+        <div class="nav-dock">
+            <div class="nav-container">
+                <div class="nav-logo">NAVNEET</div>
+                <div class="nav-icons">
+                <a href="#about" class="nav-icon" title="About">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#skills" class="nav-icon" title="Skills">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="#projects" class="nav-icon" title="Projects">
+                    <i class="fas fa-project-diagram"></i>
+                </a>
+                <div class="nav-divider"></div>
+                <a href="#certifications" class="nav-icon" title="Certifications">
+                    <i class="fas fa-certificate"></i>
+                </a>
+                <a href="#contact" class="nav-icon" title="Contact">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                </div>
             </div>
-        </header>
+        </div>
+
+
+
+         <!-- Social Media Dock -->
+        <div class="social-dock">
+            <div class="dock-container">
+                <a href="https://tryhackme.com/p/nky09" target="_blank" class="dock-item" title="TryHackMe">
+                    <img src="https://assets.tryhackme.com/img/favicon.png" alt="TryHackMe">
+                </a>
+                <a href="https://github.com/Navneetk4y4" target="_blank" class="dock-item" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/navneetky/" target="_blank" class="dock-item" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <div class="dock-line"></div>
+            </div>
+        </div>
 
         <!-- Main Projects Section -->
         <main class="projects-container">

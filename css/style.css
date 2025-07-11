@@ -213,73 +213,6 @@ a {
 }
 
 /* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1px;
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    background: linear-gradient(90deg, var(--glossy-green), var(--glossy-blue));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 10px rgba(0, 255, 170, 0.3);
-    animation: logoGlow 3s ease infinite alternate;
-}
-
-@keyframes logoGlow {
-    0% { text-shadow: 0 0 10px rgba(0, 255, 170, 0.3); }
-    50% { text-shadow: 0 0 20px rgba(0, 170, 255, 0.5); }
-    100% { text-shadow: 0 0 10px rgba(170, 0, 255, 0.3); }
-}
-
-nav {
-    display: flex;
-    gap: 2rem;
-}
-
-nav a {
-    color: var(--light-text);
-    text-decoration: none;
-    transition: all 0.3s;
-    position: relative;
-    padding: 0.5rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--glossy-green);
-    transition: width 0.3s;
-}
-
-nav a:hover {
-    color: var(--glossy-green);
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-.mobile-menu-btn {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--glossy-green);
-}
 
 /* Hero Section */
 .hero {
@@ -1159,25 +1092,7 @@ body::after {
         padding: 1rem;
     }
     
-    nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--black);
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
-    }
     
-    nav.active {
-        display: flex;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-    }
     
     .hero h1 {
         font-size: 2.5rem;
