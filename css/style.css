@@ -162,7 +162,7 @@ section {
 
 
 .glass {
-    
+    padding: 10px;
     margin-bottom: 3rem; /* Space between glass containers */
 }
 

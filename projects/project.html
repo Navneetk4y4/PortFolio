@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navneet | Projects</title>
+    <title>Navneet | Cyber Projects</title>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="project.css">
-    
-    
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <!-- Background elements -->
+     <!-- Particle.js Background -->
     <div id="particles-js"></div>
     <div class="cyber-circle circle-1"></div>
     <div class="cyber-circle circle-2"></div>
@@ -20,78 +22,285 @@
         <header class="glass">
             <div class="logo">NAVNEET</div>
             <nav>
-                <a href="index.html"><i class="fas fa-home"></i> Home</a>
-                <a href="projects.html" class="active"><i class="fas fa-project-diagram"></i> Projects</a>
-                <a href="#"><i class="fas fa-certificate"></i> Certifications</a>
-                <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="#" class="active"><i class="fas fa-project-diagram"></i> Projects</a>
+                <a href="../index.html#certifications"><i class="fas fa-certificate"></i> Certifications</a>
+                <a href="../index.html#contact"><i class="fas fa-envelope"></i> Contact</a>
             </nav>
             <div class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
         </header>
 
-        <!-- Projects Section -->
-        <section id="projects" class="glass">
-            <h2 class="section-title"><i class="fas fa-project-diagram"></i> My Projects</h2>
+        <!-- Main Projects Section -->
+        <main class="projects-container">
+            <h1 class="section-title">
+                <i class="fas fa-project-diagram"></i> My Cyber Projects
+            </h1>
             
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Auto-Forensic</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/Navneetk4y4/auto-forensic/" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
+            <!-- Project 1 - Auto-Forensic -->
+        <section class="project-card glass" id="auto-forensic">
+            <div class="project-summary">
+                <div class="project-header">
+                    <div class="project-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        Security Tool
+                    </div>
+                    <h2>Auto-Forensic</h2>
+                    <button class="toggle-expand">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="project-preview">
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>Digital Forensics</span>
+                        <span>VirusTotal API</span>
+                        <span>AbuseIPDB</span>
+                    </div>
+                    <p class="expandable-text">
+                        <span class="summary-text">Auto-Forensic is an automated cybersecurity tool designed to perform comprehensive... <span class="read-more">Read more</span></span>
+                        <span class="full-text">Auto-Forensic is an automated cybersecurity tool designed to perform comprehensive system investigations by analyzing both running processes and network connections. It collects detailed process information including executable paths, command lines, and file hashes, which are then scanned against VirusTotal's threat database. The tool simultaneously monitors network activity, identifying suspicious connections and checking IP reputations using AbuseIPDB. By generating structured CSV reports, it provides security professionals with actionable forensic data to detect potential compromises. This Python-based solution is particularly valuable for post-incident analysis and routine security audits on Windows systems.</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="project-details">
+                <div class="project-content">
+                    <div class="project-description">
+                        <h3><i class="fas fa-info-circle"></i> Project Description</h3>
+                        <p>This tool helps investigate systems after potential attacks by:</p>
+                        <ul>
+                            <li>Collecting all running processes and their executable paths</li>
+                            <li>Dumping network connections into structured files</li>
+                            <li>Generating file hashes and analyzing them via VirusTotal API</li>
+                            <li>Checking connection IPs against AbuseIPDB for reputation</li>
+                            <li>Creating comprehensive forensic reports</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-features">
+                        <h3><i class="fas fa-star"></i> Key Features</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-network-wired"></i>
+                                <h4>Network Analysis</h4>
+                                <p>Identifies all active connections and flags suspicious IPs</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bug"></i>
+                                <h4>Process Scanning</h4>
+                                <p>Detects potentially malicious processes and executables</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Threat Intelligence</h4>
+                                <p>Integrates with VirusTotal and AbuseIPDB APIs</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-file-alt"></i>
+                                <h4>Comprehensive Reports</h4>
+                                <p>Generates detailed CSV reports for analysis</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <p>Automated forensic tool for system analysis and threat detection.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Cyber Security</span>
+                    
+                    <div class="technical-implementation">
+                        <h3><i class="fas fa-code"></i> Technical Implementation</h3>
+                        <div class="code-tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" data-tab="netcon">netcon.py</button>
+                                <button class="tab-button" data-tab="process">process_analysis.py</button>
+                            </div>
+                            
+                            <div class="tab-content active" id="netcon-tab">
+                                <div class="terminal-code">
+                                    <div class="terminal-header">
+                                        <div class="terminal-btn red"></div>
+                                        <div class="terminal-btn yellow"></div>
+                                        <div class="terminal-btn green"></div>
+                                        <span>netcon.py</span>
+                                    </div>
+                                    <pre><code class="language-python">import csv
+import subprocess
+import re
+import os
+import requests
+from dotenv import load_dotenv
+import pandas as pd
+
+# Load API key from .env file
+load_dotenv()
+API_KEY = os.getenv("ABUSEIP_API_KEY")
+
+def get_network_connections():
+    """Get all network connections using netstat -ano"""
+    try:
+        result = subprocess.check_output(
+            ['netstat', '-ano'],
+            text=True,
+            stderr=subprocess.STDOUT,
+            shell=True
+        )
+        return result
+    except subprocess.CalledProcessError as e:
+        print(f"Command failed: {e}")
+        return None
+
+# ... [rest of the netcon.py code] ...</code></pre>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-content" id="process-tab">
+                                <div class="terminal-code">
+                                    <div class="terminal-header">
+                                        <div class="terminal-btn red"></div>
+                                        <div class="terminal-btn yellow"></div>
+                                        <div class="terminal-btn green"></div>
+                                        <span>process_analysis.py</span>
+                                    </div>
+                                    <pre><code class="language-python">import psutil, requests
+import time
+import csv
+from datetime import datetime
+import hashlib
+import ctypes
+import platform
+from dotenv import load_dotenv
+import os
+
+VT_URL = "https://www.virustotal.com/api/v3/files/"
+load_dotenv()  # Load environment variables from .env file
+API_KEY = os.getenv("VIRUSTOTAL_API_KEY")
+outputfile="process_report.csv"
+new_columns = ["Malicious", "Suspicious", "Undetected", "First Seen", "Last Analysis Date", "Threat Label"]
+
+# ... [rest of the process_analysis.py code] ...</code></pre>
+                                </div>
+                            </div>
                         </div>
-                        <a href="project-auto-forensic.html" class="btn btn-outline project-more-info">
-                            <i class="fas fa-info-circle"></i> More Info
-                        </a>
+                    </div>
+                    
+                    <div class="installation-guide">
+                        <h3><i class="fas fa-download"></i> Installation & Usage</h3>
+                        
+                        <div class="guide-step">
+                            <h4><i class="fas fa-code-branch"></i> 1. Clone Repository</h4>
+                            <div class="terminal-code">
+                                <div class="terminal-header">
+                                    <div class="terminal-btn red"></div>
+                                    <div class="terminal-btn yellow"></div>
+                                    <div class="terminal-btn green"></div>
+                                    <span>Terminal</span>
+                                </div>
+                                <pre><code class="language-bash"># Clone the repository
+git clone https://github.com/Navneetk4y4/auto-forensic.git
+cd auto-forensic</code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="guide-step">
+                            <h4><i class="fas fa-check-circle"></i> 2. Setup Environment</h4>
+                            <div class="terminal-code">
+                                <div class="terminal-header">
+                                    <div class="terminal-btn red"></div>
+                                    <div class="terminal-btn yellow"></div>
+                                    <div class="terminal-btn green"></div>
+                                    <span>Terminal</span>
+                                </div>
+                                <pre><code class="language-bash"># Check Python version (3.8+ required)
+python --version
+
+# Install dependencies
+pip install -r requirements.txt</code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="guide-step">
+                            <h4><i class="fas fa-cog"></i> 3. Configuration</h4>
+                            <p>Create a <code>.env</code> file in the project root with your API keys:</p>
+                            <div class="terminal-code">
+                                <div class="terminal-header">
+                                    <div class="terminal-btn red"></div>
+                                    <div class="terminal-btn yellow"></div>
+                                    <div class="terminal-btn green"></div>
+                                    <span>.env</span>
+                                </div>
+                                <pre><code class="language-ini"># VirusTotal API Key (required for process analysis)
+VIRUSTOTAL_API_KEY="your_virustotal_key_here"
+
+# AbuseIPDB API Key (required for network analysis)
+ABUSEIP_API_KEY="your_abuseipdb_key_here"</code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="guide-step">
+                            <h4><i class="fas fa-play"></i> 4. Running the Tool</h4>
+                            <div class="terminal-code">
+                                <div class="terminal-header">
+                                    <div class="terminal-btn red"></div>
+                                    <div class="terminal-btn yellow"></div>
+                                    <div class="terminal-btn green"></div>
+                                    <span>Terminal</span>
+                                </div>
+                                <pre><code class="language-bash"># Full system scan (default)
+python main.py
+
+# Network analysis only
+python main.py --network-only
+
+# Process analysis only
+python main.py --process-only
+
+# View all options
+python main.py --help</code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="guide-step">
+                            <h4><i class="fas fa-file-export"></i> 5. Generated Reports</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <i class="fas fa-network-wired"></i>
+                                    <h4>Network Reports</h4>
+                                    <ul>
+                                        <li><code>network_connections.csv</code> - All active connections</li>
+                                        <li><code>foreign_addresses.csv</code> - Unique foreign IPs</li>
+                                        <li><code>abuse_report.csv</code> - IP reputation data</li>
+                                    </ul>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-tasks"></i>
+                                    <h4>Process Reports</h4>
+                                    <ul>
+                                        <li><code>process_report.csv</code> - Process details with VirusTotal results</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Network Scanner</h3>
-                        <div class="project-links">
-                            <a href="#" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <p>Advanced network scanning tool with vulnerability detection.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Networking</span>
-                        </div>
-                        <a href="project-network-scanner.html" class="btn btn-outline project-more-info">
-                            <i class="fas fa-info-circle"></i> More Info
-                        </a>
-                    </div>
+                
+                <div class="project-actions">
+                    <a href="https://github.com/Navneetk4y4/auto-forensic" target="_blank" class="btn btn-cyber">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                    <button class="btn btn-ghost toggle-expand cyber-pulse">
+                        <i class="fas fa-times"></i> Close Details
+                    </button>
                 </div>
-
-                <!-- Add more projects as needed -->
             </div>
         </section>
+
+            <!-- Project 2 - Network Scanner -->
+            
+        </main>
     </div>
 
-    <!-- Add back button -->
-<a href="#" class="btn back-to-home">
-    <i class="fas fa-arrow-left"></i> Back to Home
-</a>
-
-<!-- Include route.js from parent directory -->
-<script src="../route.js"></script>
-
     <script src="project.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', '../js/particles-config.json');
+    </script>
 </body>
 </html>
