@@ -1,45 +1,43 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize navigation dock
-  const navDock = document.querySelector('.nav-dock');
-  const navIcons = document.querySelectorAll('.nav-icon');
-  
-  // Add tooltips to icons
-  navIcons.forEach(icon => {
-    const title = icon.getAttribute('title');
-    if (title) {
-      const tooltip = document.createElement('span');
-      tooltip.className = 'nav-tooltip';
-      tooltip.textContent = title;
-      icon.appendChild(tooltip);
-    }
-  });
-
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href !== '#') {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          const offset = 80; // Account for fixed header
-          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-          
-          window.scrollTo({
-            top: targetPosition - offset,
-            behavior: 'smooth'
-          });
-          
-          // Update URL without jumping
-          if (history.pushState) {
-            history.pushState(null, null, href);
-          } else {
-            location.hash = href;
-          }
+    // Initialize navigation dock (excluding about icon)
+    const navDock = document.querySelector('.nav-dock');
+    const navIcons = document.querySelectorAll('.nav-icon:not([href="#about"])');
+    
+    // Add tooltips to icons (excluding about icon)
+    navIcons.forEach(icon => {
+        const title = icon.getAttribute('title');
+        if (title) {
+            const tooltip = document.createElement('span');
+            tooltip.className = 'nav-tooltip';
+            tooltip.textContent = title;
+            icon.appendChild(tooltip);
         }
-      }
     });
-  });
+
+    // Smooth scrolling for navigation links (excluding about icon)
+    document.querySelectorAll('[href^="#"]:not([href="#about"])').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+                    
+                    window.scrollTo({
+                        top: targetPosition - offset,
+                        behavior: 'smooth'
+                    });
+                    
+                    if (history.pushState) {
+                        history.pushState(null, null, href);
+                    }
+                }
+            }
+        });
+    });
+
 
   // Sticky effect with scroll
   if (navDock) {
