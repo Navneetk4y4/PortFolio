@@ -114,6 +114,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+
+
+    
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
     // Scroll animation
     const animateOnScroll = function () {
         const elements = document.querySelectorAll('.skill-category, .project-card, .cert-card, .timeline-content, .section-title');
