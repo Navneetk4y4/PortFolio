@@ -144,6 +144,28 @@ body::before {
     100% { opacity: 1; }
 }
 
+
+/* Add this to your existing style.css */
+section {
+    margin-bottom: 20px; /* Adds space below each section */
+    scroll-margin-top: 100px; /* Helps with anchor link positioning */
+}
+
+/* For specific sections that need more space */
+#projects {
+    margin-bottom: 8rem;
+}
+
+#certifications {
+    margin-bottom: 8rem;
+}
+
+
+.glass {
+    
+    margin-bottom: 3rem; /* Space between glass containers */
+}
+
 /* Animated particle background */
 .particles {
     position: fixed;

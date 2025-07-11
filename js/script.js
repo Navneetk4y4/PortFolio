@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(() => {
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
-                }, 150 * index);
+                }, 10 * index);
             }
         });
     };
